@@ -1,0 +1,120 @@
+/******général*****/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0 10px 0 10px;
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.icone-black {
+    color: #353535;
+}
+
+:root {
+    --vert-clair: #99E2D0;
+    --main-bg-color: #F3F3F3;
+    --form-bg-color: #EAEAEA ;
+    --vert-foncé: #008766 ;
+    --bleu-clair: #89C8FA;
+    --bleu-marine: #003A68;
+    --violet: #9356DC;
+    --footer-bg-color: #353535 ;
+    --button-first-color: #9356DC ;
+    --button-second-color:#FF79DA ;
+}
+
+.btn {
+    padding: 13px 19px 13px 19px;
+    border-radius: 25px;
+    background-image: linear-gradient(#FF79DA ,#9356DC );
+    color: white;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-weight: 500;
+    transition: opacity 200ms ease-in-out;
+}
+
+.btn:hover {
+    opacity:0.80;
+}
+
+/******Header*****/
+
+header h1,
+header .formulaire_localisation {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header h1 {
+    display: inline-flex;
+    height: 63px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+Header .formulaire_localisation {
+    display: flex;
+    background-color: var(--form-bg-color);
+    height: 50px;
+}
+
+form input[type=text] {
+    border: none;
+    background-color: var(--form-bg-color);
+    width: 125px;
+}
+
+::placeholder {
+    text-align: center;
+    color:var(--footer-bg-color) ;
+    font-weight: 500;
+
+}
+
+/******Réserver*****/
+
+.Réservez {
+    background-color: var(--main-bg-color);
+    padding: 50px;
+}
+
+.Réservez h2,
+.Réservez p,
+.Réservez .bouton {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Réservez h2 {
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+    margin-left: 42px;
+    margin-right: 58px;
+    
+}
+
+.Réservez p {
+    flex-wrap: wrap;
+    margin: 0 26px 20px 34px;
+    font-weight: 300;
+    color:var(--footer-bg-color);
+}
+
+
+
+
