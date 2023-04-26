@@ -1,120 +1,152 @@
+@charset "UTF-8";
 /******général*****/
-
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    margin: 0 10px 0 10px;
+  margin: 0 10px 0 10px;
 }
 
 h1 {
-    font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
 }
 
 .title {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .icone-black {
-    color: #353535;
+  color: #353535;
 }
 
-:root {
-    --vert-clair: #99E2D0;
-    --main-bg-color: #F3F3F3;
-    --form-bg-color: #EAEAEA ;
-    --vert-foncé: #008766 ;
-    --bleu-clair: #89C8FA;
-    --bleu-marine: #003A68;
-    --violet: #9356DC;
-    --footer-bg-color: #353535 ;
-    --button-first-color: #9356DC ;
-    --button-second-color:#FF79DA ;
+.icone-purple {
+  color: #9356DC;
+}
+
+.icone-gray {
+  color: #7E7E7E;
 }
 
 .btn {
-    padding: 13px 19px 13px 19px;
-    border-radius: 25px;
-    background-image: linear-gradient(#FF79DA ,#9356DC );
-    color: white;
-    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
-    border: none;
-    font-weight: 500;
-    transition: opacity 200ms ease-in-out;
+  padding: 13px 19px 13px 19px;
+  border-radius: 25px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-weight: 500;
+  transition: opacity 200ms ease-in-out;
+  /******Header*****/
 }
-
 .btn:hover {
-    opacity:0.80;
-}
-
-/******Header*****/
-
-header h1,
-header .formulaire_localisation {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  opacity: 0.8;
 }
 
 header h1 {
-    display: inline-flex;
-    height: 63px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 63px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+header .formulaire_localisation {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 Header .formulaire_localisation {
-    display: flex;
-    background-color: var(--form-bg-color);
-    height: 50px;
+  display: flex;
+  background-color: #EAEAEA;
+  height: 50px;
 }
 
 form input[type=text] {
-    border: none;
-    background-color: var(--form-bg-color);
-    width: 125px;
+  border: none;
+  background-color: #EAEAEA;
+  width: 125px;
 }
 
 ::placeholder {
-    text-align: center;
-    color:var(--footer-bg-color) ;
-    font-weight: 500;
-
+  text-align: center;
+  color: #353535;
+  font-weight: 500;
+  /******Réserver*****/
 }
-
-/******Réserver*****/
 
 .Réservez {
-    background-color: var(--main-bg-color);
-    padding: 50px;
+  background-color: #F3F3F3;
+  padding: 50px;
 }
-
-.Réservez h2,
-.Réservez p,
-.Réservez .bouton {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
 .Réservez h2 {
-    padding-bottom: 30px;
-    flex-wrap: wrap;
-    margin-left: 42px;
-    margin-right: 58px;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 30px;
+  flex-wrap: wrap;
+  margin-left: 42px;
+  margin-right: 58px;
 }
-
 .Réservez p {
-    flex-wrap: wrap;
-    margin: 0 26px 20px 34px;
-    font-weight: 300;
-    color:var(--footer-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 0 26px 20px 34px;
+  font-weight: 300;
+  color: #353535;
+}
+.Réservez .bouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
+/******Fonctionnement*****/
+.Fonctionnement {
+  margin: 10px;
+}
 
+.Fonctionnement--liste {
+  display: flex;
+  flex-direction: column;
+}
 
+.Fonctionnement--liste__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: none;
+  border-radius: 20px;
+  height: 72px;
+  width: auto;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.Fonctionnement--liste__box .numéro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -12px;
+  border: none;
+  border-radius: 24px;
+  background-color: #9356DC;
+  color: white;
+  width: 24px;
+  height: 24px;
+}
+.Fonctionnement--liste__box i {
+  margin-right: 20px;
+}
 
+/*# sourceMappingURL=Style-index.css.map */
