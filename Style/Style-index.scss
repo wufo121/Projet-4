@@ -3,7 +3,7 @@ $gris-noir: #353535;
 $gris:#7E7E7E;
 $blanc: white;
 $vert-clair: #99E2D0;
-$vert-foncé: #008766;
+$vert-fonce: #008766;
 $bleu-clair: #89C8FA;
 $bleu-marine: #003A68;
 $violet: #9356DC;
@@ -13,6 +13,7 @@ $form-bg-color: #EAEAEA;
 $main-box-shadow:0px 2px 4px rgba(0, 0, 0, 0.15);
 $font-family_1: 'Roboto', sans-serif;
 $font-family_2: 'Shrikhand', cursive;
+
 
 @mixin flex-center {
 	display: flex;
@@ -31,6 +32,7 @@ $font-family_2: 'Shrikhand', cursive;
 }
 body {
 	margin: 0 10px 0 10px;
+	box-sizing: border-box;
 }
 h1 {
 	font-family: $font-family_2;
@@ -65,9 +67,7 @@ h1 {
 }
 
 .card {
-
 	border-radius: 15px;
-	box-sizing: border-box;
 
 		img {
 	object-fit: cover;
@@ -195,6 +195,16 @@ form {
 /******Réstaurant*****/
 
 
+
+.restaurants {
+	padding-bottom:50px ;
+
+	h2{
+		margin-bottom: 20px;
+	}
+}
+
+
 .restaurants-card {
 
 	a{
@@ -204,31 +214,112 @@ form {
 
 	.card {
 		width:100%;
-		height: 100px;
 		box-shadow: $main-box-shadow;
 		border-radius: 15px;
+		margin-bottom: 20px;
+		position: relative;
+	}
+
+	.card-content {
+		display: flex;
+		flex-direction: column;
 		height: 251px;
 
+
+
 		img {
-				width:100%;
-				height: 70%;
-				border-radius: 15px 15px 0 0;
+			width: 100%;
+			height: 70%;
+			border-radius: 15px 15px 0 0;
 		}
 
 		.card-txt {
 			display: flex;
 			justify-content: flex-start;
 			flex-direction: column;
-			margin-left: 5px;
+			margin-left: 9px;
 		}
 
 		.card-title {
 			padding:7px 0 5px 0;
 		}
+	}
 
-		
 
+	
+
+	.Like {
+		position: absolute;
+		bottom: 25px;
+		right: 25px;
+		font-size: 2em;	
+		transition: all 0.2s ease-in-out;
+		}
+	
+
+	input[type=checkbox]{
+		display: none;
+		position: absolute;
+		bottom: 25px;
+		right: 25px;
+
+		&:checked + .Like {
+			font-weight: bolder;
+			color: transparent;
+			background-clip: text;
+			-webkit-background-clip: text;
+			background-image: linear-gradient($violet,$Rose);
+			scale: 1.1;
+		}
+	}
+
+	.new {
+		border: transparent;
+		border-radius: 2px;
+		background-color: $vert-clair;
+		color: $vert-fonce;
+		position: absolute;
+		top:14px;
+		right: 14px;
+		padding: 6px;
+		box-shadow: $main-box-shadow;
+		font-weight: 500;
 	}
 }
 
 
+/******Footer*****/
+
+Footer {
+	background: $gris-noir;
+
+	p,
+	i,
+	h3 {
+		color: white;
+		margin-bottom: 7px;
+		margin-right: 7px;
+	}
+
+	h3 {
+		font-family: $font-family_2;
+		font-weight: 400;
+		padding:20px 10px 10px 20px;
+	}
+}
+.footer-direction {
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
+	text-align:start;
+
+}
+
+.icone-texte {
+	display: flex;
+	flex-direction: row;
+}
+
+.fa-utensils {
+	margin-right: 12px;
+}
