@@ -126,7 +126,7 @@ header nav {
   height: 69px;
 }
 .card:hover > .card-check {
-  width: 15%;
+  width: 20%;
   transform: scaleX(1);
 }
 .card .card-content {
@@ -153,7 +153,7 @@ header nav {
   width: 0;
   transform: scaleX(0);
   transform-origin: right;
-  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .card .card-check .check {
   display: flex;

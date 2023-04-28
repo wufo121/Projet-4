@@ -68,8 +68,18 @@ h1 {
 }
 
 .card {
+	position: relative;
 	border-radius: 15px;
+	transition: all 0.2s ease;
 
+	&:hover {
+		transform: scale(1.03);
+		
+		
+	}
+
+	
+	
 		img {
 	object-fit: cover;
 	}
@@ -221,6 +231,11 @@ form {
 		border-radius: 15px;
 		margin-bottom: 20px;
 		position: relative;
+		transition: all 0.5s ease;
+
+		&:hover{
+			box-shadow: 0px 7px 14px 6px rgba(4, 3, 3, 0.25);
+		}
 	}
 
 	.card-content {

@@ -47,7 +47,12 @@ h1 {
 }
 
 .card {
+  position: relative;
   border-radius: 15px;
+  transition: all 0.2s ease;
+}
+.card:hover {
+  transform: scale(1.03);
 }
 .card img {
   object-fit: cover;
@@ -173,6 +178,10 @@ form input[type=text] {
   border-radius: 15px;
   margin-bottom: 20px;
   position: relative;
+  transition: all 0.5s ease;
+}
+.restaurants-card .card:hover {
+  box-shadow: 0px 7px 14px 6px rgba(4, 3, 3, 0.25);
 }
 .restaurants-card .card-content {
   display: flex;
