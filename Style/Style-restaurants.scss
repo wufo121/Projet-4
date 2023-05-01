@@ -79,6 +79,15 @@ img {
 	object-fit: cover;
 	}
 
+@keyframes apparition {
+	0% {
+		opacity: 0;
+	  }
+	100% {
+		opacity: 1;
+	  }
+}
+
 
 /******Header*****/
 
@@ -126,16 +135,46 @@ header {
 	box-sizing: border-box;
 }
 
+.titre-restaurant{
+	display: flex;
+	justify-content: center;
+	gap:20px;
+}
+.Like {
+	margin-top: 4px;
+	justify-self: center;
+	font-size: 2em;	
+	transition: all 0.2s ease-in-out;
+	}
+
+
+input[type=checkbox]{
+	display: none;
+
+
+	&:checked + .Like {
+		font-weight: bolder;
+		color: transparent;
+		background-clip: text;
+		-webkit-background-clip: text;
+		background-image: linear-gradient($violet,$Rose);
+		scale: 1.1;
+	}
+}
+
 
 .entrée,
 .plat,
 .dessert {
+
+
 
 	h3 {
 		position: relative;
 		font-weight: 300;
 		padding-bottom: 20px;
 	}
+
 
 	h3::after {
 		content: "";
@@ -155,29 +194,50 @@ header {
 }
 
 
+
 .card {
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: row-reverse;
 	box-sizing: border-box;
 	height: 69px;
-	
+	opacity: 0;
+	animation: apparition 1s ease-in-out forwards;
+	overflow: hidden;
 
 	&:hover > .card-check{
 		width: 20%;
 		transform: scaleX(1);
-		
 	}
-	
+
+	&:hover > .card-content{
+		width: 80%;
+	}
+
  
 	.card-content {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: center;
-		margin-left: 15px;
 		border-radius: 0 15px 15px 0 ;
 		width: 100%;
+		transform: scaleX(1);
+		transform-origin: left;
+		transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+		h4,
+		p.description {
+			text-overflow: ellipsis;
+  			overflow: hidden;
+  			white-space: nowrap;
+			margin-left: 15px;
+			width: 100%;
+		}
+
+		h4 {
+			margin-bottom: 9px;
+		}
 
 		.card-txt {
 			display: flex;
@@ -185,8 +245,6 @@ header {
 			justify-content: space-between;
 			width: 95%
 		}
-		
-
 }
 	.card-check {
 		@include flex-center;
@@ -196,6 +254,7 @@ header {
 		transform: scaleX(0);
 		transform-origin: right;
 		transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		
 
 
 		.check{
@@ -211,10 +270,57 @@ header {
 	}
 
 
-	h4 {
-		margin-bottom: 9px;
+	
+}
 
-	}
+.entrée {
+
+	
+	.card:nth-of-type(1) {
+		animation-delay: 0.5s;
+	  }
+	  
+	.card:nth-of-type(2) {
+		animation-delay: 1s;
+	  }
+	  
+	.card:nth-of-type(3) {
+		animation-delay: 1.5s;
+	  }
+
+	.card:nth-of-type(4) {
+		animation-delay: 2s;
+	  }
+}
+
+.plat {
+	
+	.card:nth-of-type(1) {
+		animation-delay: 2.5s;
+	  }
+	  
+	.card:nth-of-type(2) {
+		animation-delay: 3s;
+	  }
+	  
+	.card:nth-of-type(3) {
+		animation-delay: 3.5s;
+	  }
+}
+
+.dessert {
+	
+	.card:nth-of-type(1) {
+		animation-delay: 4s;
+	  }
+	  
+	.card:nth-of-type(2) {
+		animation-delay: 4.5s;
+	  }
+	  
+	.card:nth-of-type(3) {
+		animation-delay: 5s;
+	  }
 }
 /******bouton*****/
 
@@ -232,7 +338,8 @@ Footer {
 
 	p,
 	i,
-	h3 {
+	h3,
+	a {
 		color: white;
 		margin-bottom: 7px;
 		margin-right: 7px;
@@ -242,6 +349,10 @@ Footer {
 		font-family: $font-family_2;
 		font-weight: 400;
 		padding:20px 10px 10px 20px;
+	}
+
+	a {
+		text-decoration: none;
 	}
 }
 .footer-direction {
@@ -261,3 +372,50 @@ Footer {
 	margin-right: 12px;
 }
 
+
+/***Desktop***/
+
+@media (min-width: 768px) {
+
+	.menu {
+		left:10%;
+		width:80%;
+
+		h1 {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 50px;
+		}
+	}
+
+	.entrée,
+	.plat,
+	.dessert {
+		margin: 0 150px 0 150px;
+	}
+
+
+
+
+
+	/***footer***/
+	
+
+	.footer-direction {
+
+		flex-direction: row-reverse;
+		align-items: center;
+		justify-content: flex-start;
+		height: 114px;
+
+		h3{
+			margin-left:40px;
+		}	
+	} 
+
+	.desktop-footer {
+		display: flex;
+		flex-direction: row;
+		gap:20px;
+	}
+}
