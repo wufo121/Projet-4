@@ -96,8 +96,11 @@ $font-family_2: 'Shrikhand', cursive;
 	font-family: $font-family_1;
 }
 body {
-	margin: 0 10px 0 10px;
 	box-sizing: border-box;
+
+	section {
+		margin: 0 10px 0 10px;
+	}
 }
 h1 {
 	font-family: $font-family_2;

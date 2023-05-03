@@ -57,8 +57,10 @@
 }
 
 body {
-  margin: 0 10px 0 10px;
   box-sizing: border-box;
+}
+body section {
+  margin: 0 10px 0 10px;
 }
 
 h1 {
