@@ -69,7 +69,7 @@ $font-family_2: 'Shrikhand', cursive;
 	}
 	
 	25% {
-	  transform: translateY(-12,5px) rotateX(30deg);
+	  transform: translateY(-12.5px) rotateX(30deg);
 	  color:$Rose;
 	}
 	50% {
@@ -128,7 +128,7 @@ h1 {
 	transition: all 200ms ease-in-out;
 	&:hover {
 		opacity: 0.8;
-		scale: 1.05;
+		transform:scale(1.05);
 	}
 }
 
@@ -162,7 +162,7 @@ h1 {
 	height:2500px;
 	width:100%;
 	background-color:#F3F3F3;
-	box-sizing:box-border; 
+	box-sizing:border-box;
 	animation:disparition 4s forwards;
   }
   
@@ -427,7 +427,7 @@ form {
 			background-clip: text;
 			-webkit-background-clip: text;
 			background-image: linear-gradient($violet,$Rose);
-			scale: 1.1;
+			transform:scale(1.1);
 		}
 	}
 
