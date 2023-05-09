@@ -166,7 +166,7 @@ h1 {
 	width:100%;
 	background-color:#F3F3F3;
 	box-sizing:border-box;
-	animation:disparition 4s forwards;
+	animation:disparition 3s forwards;
   }
   
   .loader {
@@ -424,7 +424,7 @@ form {
 		bottom: 25px;
 		right: 25px;
 
-		&:checked + .Like {
+		&:hover + .Like {
 			font-weight: bolder;
 			color: transparent;
 			background-clip: text;
@@ -496,22 +496,32 @@ Footer {
 
 	/***Fonctionnement***/
 
+	.Fonctionnement {
+		margin-left: 150px;
+		margin-right: 150px;
+		h2{
+			display: flex;
+			justify-content: flex-start;
+		}
+	}
+
 	.Fonctionnement--liste{
 		flex-direction: row;
 		width: 100%;
 		gap: 20px;
-		justify-content: space-around;
+		justify-content: flex-start;
 	}
 
 	.Fonctionnement--liste__box {
-		padding-left: 70px;
-		padding-right: 70px;
+		width: 31%;
 	}
 
 	/***Restaurants***/
 
 	.restaurants {
 		margin:20px 20px 0 20px;
+		margin-left: 150px;
+		margin-right: 150px;
 		padding: 0;
 		
 	}
