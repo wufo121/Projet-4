@@ -497,8 +497,8 @@ Footer {
 	/***Fonctionnement***/
 
 	.Fonctionnement {
-		margin-left: 150px;
-		margin-right: 150px;
+		margin-left: 20%;
+		margin-right: 20%;
 		h2{
 			display: flex;
 			justify-content: flex-start;
@@ -514,23 +514,32 @@ Footer {
 
 	.Fonctionnement--liste__box {
 		width: 31%;
+		font-weight: 500;
 	}
 
 	/***Restaurants***/
 
+
+	
+
 	.restaurants {
-		margin:20px 20px 0 20px;
-		margin-left: 150px;
-		margin-right: 150px;
-		padding: 0;
-		
+		padding-top:40px;
+		background-color: #f6f6f6;
+		width:100%;
+
+		h2{
+			margin-bottom: 50px;
+			margin-left: 20%;
+		}
 	}
 
 	.desktop-restaurants {
-		gap:50px;
+		gap:75px;
 		display: flex;
 		flex-direction: row;
 		margin-bottom: 30px;
+		margin-left: 20%;
+		margin-right: 20%;
 	}
 
 	/***footer***/
